@@ -10,9 +10,11 @@ from app.db.database import create_tables
 
 app = FastAPI(title="KIS Canvas", version="1.0.0")
 
+from app.core.config import settings
+
 app.add_middleware(
     SessionMiddleware,
-    secret_key="your-secret-key-here-change-in-production"
+    secret_key=settings.SECRET_KEY
 )
 
 app.add_middleware(
