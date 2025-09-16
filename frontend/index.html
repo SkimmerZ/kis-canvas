@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIS Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>KIS Canvas</h1>
+        <div class="stats">
+            <span id="cooldown-status">Ready to place</span>
+            <span id="coordinates">x: 0, y: 0</span>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+            <div class="zoom-controls">
+                <button id="zoom-in">+</button>
+                <button id="zoom-out">-</button>
+                <button id="reset-zoom">Reset</button>
+                <button id="toggle-grid">Grid: On</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="color-palette">
+                <h3>Colors</h3>
+                <div id="color-grid"></div>
+            </div>
+
+            <div class="selected-color">
+                <h3>Selected Color</h3>
+                <div id="current-color" class="color-preview"></div>
+            </div>
+
+            <div class="instructions">
+                <h3>Instructions</h3>
+                <p>1. Select a color from the palette</p>
+                <p>2. Click on the canvas to place a pixel</p>
+                <p>3. Wait 30 seconds between placements</p>
+                <p>4. Use zoom controls to navigate</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
